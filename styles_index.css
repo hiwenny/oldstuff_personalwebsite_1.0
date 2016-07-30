@@ -1,0 +1,96 @@
+
+#topContainer {
+	background-image:url("./images/bg_space.jpg");
+	background-position:center; 
+	background-size:cover;
+	width:100%;
+	height:600px;
+}
+	
+#topRow {
+	text-align:center;
+	margin-top:150px;
+}
+
+#topRow h1 {
+	font-size:300%;
+}
+
+#topRow button{
+	border:1px solid #b2b2b2;
+	color:#b2b2b2;
+}
+
+#topRow button:hover{
+	border:1px solid #ededed;
+	color:#ededed;
+}
+
+#theWhys {
+	padding-top:50px;
+	background-image:url("./images/bg_sky.jpg");
+	background-position:center; 
+	background-size:cover;
+	width:100%;
+	color:#373737;
+}
+
+#theWhys h2 {
+	text-align:center;
+}
+
+#theWhys h4 {
+	text-align:center;
+}
+
+#theWhys button{
+	border:1px solid #6f6f6f;
+	color:#6f6f6f;
+}
+
+#theWhys button:hover{
+	border:1px solid #373737;
+	color:#373737;
+}
+	
+#theWorks {
+	padding-top:50px;
+	background-image:url("./images/bg-windows-res.jpg");
+	background-position:center; 
+	background-size:cover;
+	width:100%;
+	color:#373737;
+}
+
+#theWorks button{
+	border:1px solid #6f6f6f;
+	color:#6f6f6f;
+}
+
+#theWorks button:hover{
+	border:1px solid #373737;
+	color:#373737;
+}
+
+#theEnd {
+	 padding-top:50px;
+	 width:100%;
+}
+
+.serif {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.rollPaddingCenter {
+	padding-top:185px;
+}
+
+#webdev {
+	background:url(./images/icon_webdev.png) center center no-repeat #000;
+}
+
+
+#projects {
+	background:url(./images/icon_projects.png) center center no-repeat #000;
+}
+

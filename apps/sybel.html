@@ -1,0 +1,317 @@
+<!-- Essentially a JSBin copy with limited functionalities.
+HTML/CSS try-outs only.
+JS actually works but commented out due to security risk when allowing for outside script to run on server.
+To reenable usage, download page source and uncomment the JS eval part on the script section then run locally.
+
+Peace out,
+wenn
+-->
+
+<!doctype html>
+<html>
+<head>
+<title>Syncing is Believing</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<style>
+	body {
+		margin:0;
+		padding:0;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight: 300;
+	}
+	
+	#menuBar {
+		width:100%;
+		height:36px;
+		background-color:#EDEDED;
+		border-bottom:1px solid grey;
+	}
+	
+	#fileaddlib {
+		float:left;
+		margin:0;
+		padding:0;
+	}
+	
+	.leftList {
+		margin:0;
+		padding:0;
+	}
+	
+	.leftList li {
+		font-size:85%;
+		list-style:none;
+		padding:11px 11px 3px 11px;
+		float:left;
+	}
+	
+	.dropdown ul {
+
+	}
+	
+	.dropdown li {
+		margin:0;
+		padding:0;		
+		float:none;
+	}
+	
+	#logo {
+		padding:3px 0px 3px 6px;
+		
+	}
+
+	
+	#toggles {
+		float:left;
+		margin:0 auto;
+		padding:0;
+		list-style:none;		
+		border:1px solid #BFBFBF;
+		border-radius:3px;
+		height:31px;
+		font-size:90%;
+		position:absolute;
+		margin-top:2px;
+	}
+	
+	#toggles li{
+		float:left;
+		padding:7px 10px 4px 10px;
+		border-right:1px solid grey;
+		border-color:#BFBFBF;
+	}
+	
+	#toggles li:last-child {
+		border-right:none;
+	}
+	
+	.toggle {
+	}
+	
+	.selected{
+		background-color:#E8F2FF;
+	}
+	
+	#userPanel {
+		float:right;
+		margin:0 auto;
+		border:none;
+		padding:0;
+		height:25px;
+		width:300px;
+		list-style:none;
+		font-size:85%;
+	}
+	
+	#userPanel li {
+		float:right;
+		padding:11px 9px 3px 9px;
+	}
+	
+	.codeArea {
+		background-color:#F7F7F7;
+		height:100%;
+		width:33.3333%;
+		float:left;
+		position:relative;
+		margin:0;
+		padding:0;
+
+	}
+	
+	.codeArea textarea {
+		height:100%;
+		width:100%;
+		border:none;
+		border-right:1px solid grey;
+		font-family:"Lucida Console", Monaco, monospace;
+		font-size:90%;
+		padding:8px;
+		padding-top:35px;
+		background-color:#F7F7F7;
+		box-sizing:boxed-box;
+	}
+	
+	.codeLabel {
+		position:absolute;
+		margin:8px;
+		
+	}
+	
+	#HTMLarea {	
+	}
+	
+	#JavaScriptarea, #Consolearea {
+		display:none;
+	}
+	
+	iframe {
+		position:relative;
+		margin-top:24px;		
+		height:100%;
+		width:100%;
+		left:1px;
+		border:none;
+		font-size:90%;
+	}
+	
+	a:hover {
+		text-decoration:none;
+		
+	}
+	
+	.clear {
+		clear:both;
+	}
+	
+</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="menuBar">
+	
+	<div id="fileaddlib">
+		<ul class="leftList">
+			<li id="logo">
+				<img src="./icon_sybel.png" />
+			</li>
+		
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">File <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">New</a></li>
+					<li><a href="#">Make bin private</a></li>
+					<li><a href="#">Delete</a></li>
+					<li><a href="#">Archive</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Add description</a></li>
+					<li><a href="#">Save snapshot</a></li>
+					<li><a href="#">Clone</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Publish to vanity homepage</a></li>
+					<li><a href="#">Export as gist</a></li>
+					<li><a href="#">Download</a></li>
+					<li><a href="#">Save as template</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#">Add library</a></li>
+		</ul>
+	</div>
+		
+		<ul id="toggles">
+			<li class="toggle selected">HTML</li>
+			<li class="toggle selected">CSS</li>
+			<li class="toggle">JavaScript</li>
+			<li class="toggle">Console</li>
+			<li class="toggle selected">Output</li>
+		</ul>
+		
+		<ul id="userPanel">
+			<li>Help</li>
+			<li>Blog</li>
+			<li>Login or Register</li>				
+		</ul>
+		
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="codeArea" id="HTMLarea">
+		<div class="codeLabel">HTML</div>
+		<textarea id="HTMLcode">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Bin</title>
+</head>
+<body>
+
+
+</body>
+</html>
+	</textarea>
+	</div>
+	
+	<div class="codeArea" id="CSSarea">
+		<div class="codeLabel">CSS</div>
+		<textarea id="CSScode"></textarea>
+	</div>
+	
+	<div class="codeArea" id="JavaScriptarea">
+		<div class="codeLabel">JavaScript</div>
+		<textarea id="JavaScriptcode">JavaScript here</textarea>
+	</div>
+	
+	<div class="codeArea" id="Consolearea">
+		<div class="codeLabel">Console</div>
+		<textarea id="Consolecode">Console here</textarea>
+	</div>
+	
+	<div class="codeArea" id="Outputarea">
+		<div class="codeLabel">Output</div>
+		<iframe id="resultFrame"></iframe>
+	</div>
+	
+</div>
+
+<script>
+	var windowH = $(window).height();
+	var menuBarH = $("#menuBar").height();
+	
+	var windowW = $(window).width();
+	var togglesW = $("#toggles").width();
+	var logoW = $("#logo").width();
+	
+	var codeAreaH = (windowH - menuBarH) + "px";
+	var togglesLeft = (windowW - togglesW)/2 +"px" ;
+	
+	//here's how you apply the changes to the attr
+	$("#toggles").css("marginLeft", togglesLeft);
+	$(".codeArea").css("height", codeAreaH);
+	
+	//the code toggle functionalities
+	$(".toggle").click(function() {
+		$(this).toggleClass("selected");
+		var activeDiv = '#' + $(this).html() + "area";
+		
+		$(activeDiv).toggle();
+		
+		var shownDivs = $(".codeArea").filter(function() {
+			return($(this).css("display") != "none");
+		}).length;
+		
+		var dynaWid = 100/shownDivs + '%';
+		$(".codeArea").width(dynaWid);
+	
+	});
+	
+	$("textarea").keyup(function() {
+		$("iframe").contents().find("html").html("<style>"+$("#CSScode").val()+"</style>" + $("#HTMLcode").val());
+	});
+	
+	//To let js run though is a security risk. Ok if offline but generally a bad idea to do so online since this exposes the website to rogue scripts.
+	//To do this, run this (can access server!!! Disable until workaround).
+	//document.getElementById("resultFrame").contentWindow.eval(("#JScode").val());
+	
+</script>
+
+
+</body>
+</html>
+

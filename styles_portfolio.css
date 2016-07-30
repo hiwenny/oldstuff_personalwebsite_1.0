@@ -1,0 +1,45 @@
+
+.rollPaddingAll {
+	padding:0px 20px 20px 20px;
+}
+
+body {
+	background-color:white;
+	color:#444444;
+}
+
+h1 {
+	font-size:400%;
+	text-shadow: none;
+}
+
+h3{
+	color:white;
+}
+
+i {
+	color:white;
+}
+
+i.black {
+	color:#444444;
+}
+
+.codeText {
+	font-family:"Lucida Console", Monaco, monospace;
+}
+
+.fig {
+	width:100%;
+	margin-bottom:15px;
+}
+
+.figNoSpace {
+	width:100%;
+}
+
+#theEndPortfolio {
+	padding-top:50px;
+	width:100%;
+	background-color:#272B30;
+}

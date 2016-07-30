@@ -1,0 +1,152 @@
+.clear {
+	clear:both;
+}
+
+.navbar-brand{
+	font-size:1.8em;
+}
+
+.transButton {
+	background:transparent;
+}
+.grayWhite {
+	color:#FFFFFF;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.center {
+	text-align:center;
+}
+
+.left {
+	text-align:left;
+}
+
+.title {
+	font-size:250%;
+}
+
+.greyout {
+	color:#b2b2b2;
+}
+
+.marginTop30 {
+	margin-top:30px;
+}
+
+.marginTop50 {
+	margin-top:50px;
+}
+
+.marginTop80 {
+	margin-top:80px;
+}
+
+.marginBottom10 {
+	margin-bottom:10px;
+}
+
+.marginBottom30 {
+	margin-bottom:30px;
+}
+
+.marginBottom50 {
+	margin-bottom:50px;
+}
+
+.marginBottom80 {
+	margin-bottom:80px;
+}
+
+.marginRight10 {
+	margin-right:10px;
+}
+
+.marginRight30 {
+	margin-right:30px;
+}
+
+.modal-transparent {
+  background: transparent;
+}
+.modal-transparent .modal-content {
+  opacity: .9;
+}
+.modal-backdrop.modal-backdrop-transparent {
+  background: #000000;
+}
+.modal-backdrop.modal-backdrop-transparent.in {
+  opacity: .9;
+  filter: alpha(opacity=90);
+}
+
+img.squares300 {
+	height:300px;
+	width:300px;
+}
+
+img.squares250 {
+	height:250px;
+	width:250px;
+}
+
+span.roll {
+	background:url(images/mag.png) center center no-repeat #000;
+	height:300px;
+	position:absolute;
+	width:300px;
+	z-index:10;
+	color:white;	
+	-webkit-box-shadow: 0px 0px 4px #000;
+	-moz-box-shadow: 0px 0px 4px  #000;
+	box-shadow: 0px 0px 4px  #000; 
+}
+
+span.roll250 {
+	height:250px;
+	width:250px;
+}
+
+.iframe300 {
+	height:300px;
+	width:300px;
+	overflow:hidden;
+	border:none;
+}
+
+iframe.zoomout {
+
+	 width: 1200px;
+     height: 1200px;
+     border: 0;
+     -ms-transform: scale(0.50);
+     -moz-transform: scale(0.50);
+     -o-transform: scale(0.50);
+     -webkit-transform: scale(0.50);
+     transform: scale(0.50);
+    
+     -ms-transform-origin: 0 0;
+     -moz-transform-origin: 0 0;
+     -o-transform-origin: 0 0;
+     -webkit-transform-origin: 0 0;
+     transform-origin: 0 0;
+}
+
+p.contact {
+	letter-spacing:5px;
+}
+
+.footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height: 60px;
+	background-color: #f5f5f5;
+}
+
+iframe.contactFormModal {
+	height:100px;
+}

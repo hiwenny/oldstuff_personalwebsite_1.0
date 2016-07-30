@@ -1,0 +1,168 @@
+<!--
+Copyright © 2016 Wenny Hidayat.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Web Developer, Mechatronics, HTML, CSS, JavaScript, C++, Matlab, Sydney">
+	<meta name="author" content="Wenny Hidayat">
+	
+    <title>Fuzzy Controls Simulation</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<!-- Custom css settings -->
+	<link rel="stylesheet" type="text/css" href="../styles_global.css">
+	<link rel="stylesheet" type="text/css" href="../styles_portfolio.css">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+	<div class="container">
+		<div class="row marginTop50 marginBottom50 center">
+			<h1>Fuzzy Controls Simulation</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="fig" src="../images/fuzzy_fig.png" />
+				<p>
+				Run the Fuzzy_Control.mat file in MATLAB to see the simulation. Red dot is the target, blue triangle is the vehicle/car, light blue is the trajectory of the car.
+				</p>
+				<p>
+				This code shows an example of fuzzy logic controls (mamdani method) of a, say, self-driving car. 
+				It controls the movement response of the car, adjusting as necessary depending on how far the car is from the target.
+				The farther it is, the faster the car will drive in order to catch up. 
+				</p>
+				<p>
+				The fuzzy logic controller is also included in the repository with the name Control_new.fis. 
+				To edit, call ‘fuzzy’ in the MATLAB command line to bring up the GUI, and import the .fis file.
+				</p>
+				
+			</div>
+			
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="fig" src="../images/fuzzy_control.png" />
+				<p>
+				Fuzzy logic itself is an intuitive way of defining the behaviours of a controller. 
+				In this situation for example, the car has to chase after a moving target. 
+				Instead of having two modes only: driving and stopping, with fuzzy control we can also have 
+				‘drive slow’ and ‘drive fast’ modes, or even ‘drive slowest’, ‘drive slow’, ‘drive fast’, ‘drive faster’, 
+				‘drive even faster’, even ‘like there’s no morrow’. 
+				</p>
+				<p>
+				The control system was generated using MATLAB's Fuzzy Logic Toolbox. This takes into account four 
+				things: distance input, angular distance input, velocity output, and angular velocity output. 
+				</p>
+				<p>
+				Change the membership functions of each one by double-clicking on any one of the four boxes.
+				</p>
+			</div>
+
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="figNoSpace" src="../images/fuzzy_dist.png" />
+				<img class="fig" src="../images/fuzzy_angdist.png" />
+				<p>
+				Notice that the mf allocations of Distance and Angular Distance inputs are similar, differing only in the scale. 
+				They’re just for convenience, feel free to change them as needed.
+				</p>
+				<p>
+				Here is where we define ‘how far is far?’ and vice-versa. You can set the range, name of the membership function
+				(whose relationships will need to be defined for each one of them). In this example I’ve set all of the mfs to be
+				triangles (trimf… tri-mf) again for convenience’s sake – change as needed.
+				</p>
+			</div>
+			
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="figNoSpace" src="../images/fuzzy_vel.png" />
+				<img class="fig" src="../images/fuzzy_angvel.png" />
+				<p>
+				The velocity output here is set up so that it doesn’t have any negative-value response for output. This is because
+				I didn’t want the car to reverse, and since negative output on the velocity is used to make the car go backwards the controller
+				has no use of it in this case.
+				</p>
+				<p>
+				With the angular velocity though, I wanted to have the option to turn in the opposite direction – left or right, so I added mfs for both cases.
+				</p>
+				<p>
+				The inputs-outputs are not linked automatically; they have to be defined using IF… THEN… format for each case. 
+				Just adding more mfs to the plot won’t make a difference if the new mfs’ relationships aren’t defined in the rules.
+				</p>				
+			</div>	
+			
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="figNoSpace" src="../images/fuzzy_rulesbox.png" />
+				<img class="fig" src="../images/fuzzy_rules.png" />
+				<p>
+				Edit -> Rules to bring up the Rules tab.	
+				</p>			
+			</div>	
+
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom30">
+				<img class="figNoSpace" src="../images/fuzzy_rulesbox.png" />
+				<img class="fig" src="../images/fuzzy_rules.png" />
+				<p>
+				You can change the rules in the Rules tab. Note that the rules have to be defined manually for each case or the controller will just ignore them (not taken into account).
+				</p>		
+				<p>
+				After editing, export into file/workspace. If you exported it as a .fis file you’d need to change the Fuzzy_Control.mat file on the line <br />
+				<span class="codeText"> fis = readfis('Your_new_fis_here.fis’);</span>.
+				</p>
+			</div>				
+			
+			<div class="col-xs-12 col-md-6 col-md-offset-3 marginBottom50 center">
+				<p>Get it here:</p>
+				<p><a href="https://github.com/hiwenny/Fuzzy_Control_Simulation_Simple"><i class="fa fa-github-alt fa-5x black"></i></a></p>			
+			</div>	
+		</div>
+
+	</div>
+		
+	<div class="clear"></div>
+	
+	
+	<div class="container center" id="theEndPortfolio">
+		<div class="row">
+			<p class="contact marginBottom30">
+				<a href="https://github.com/hiwenny"><i class="fa fa-github fa-3x"></i></a>				
+				<a href="https://www.linkedin.com/in/wennyh"><i class="fa fa-linkedin-square fa-3x"></i></a>				
+				<a href="" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o fa-3x"></i></a>
+				<div class="modal" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close grayWhite" data-dismiss="modal">x</button>
+								<h3 class="modal-title">Leave a Message</h3>
+							</div>
+							<div class="modal-body contactFormModal ">
+								<iframe src="./submish_message.php" frameborder="0" height="300px" scrolling="no"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</p>	
+		</div>
+	</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<!-- Custom script add -->
+	<script src="../javascript_global.js"></script>
+  </body>
+</html>

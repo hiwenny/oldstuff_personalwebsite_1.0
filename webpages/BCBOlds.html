@@ -1,0 +1,808 @@
+<!--
+A layout styling exercise in pure HTML/CSS.
+Modelled after the BBC UK.
+All images were changed to avoid lawsuits.
+Images credit to freeimages.com
+ -->
+ 
+ <!--
+ In retrospect perhaps photos of bees would've been more appropriate. Maybe later, doesn't matter.
+ -->
+ 
+<!doctype html>
+<html>
+<head>
+    <title>Straya - Busy Bee Olds</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+<!--	responsiveness is just a pain in this case -->
+
+    <link rel="stylesheet" type="text/css" href="./styles_BCBOlds.css">	
+
+</head>
+
+<body>
+<!--for reusable css formats put in separate file. neater too. 
+
+    <style type="text/css">
+
+	
+    </style>	-->
+	
+	<div id="container">
+		<div id="topbar">
+			<div class="fixedwidth">
+				<div id="logodiv">
+					<a href="#">
+					<img src="./BCBOlds_images/bbc-blocks-dark.png" />
+					</a>
+				</div>
+
+				<div id="signindiv">
+					<a href="#">
+						<img src="./BCBOlds_images/signin.png" />
+						Sign in
+					</a>
+				</div>
+
+				<div id="topmenudiv">
+					<ul>
+						<li><a href="#">Sewn</a></li>
+						<li><a href="#">Ports</a></li>
+						<li><a href="#">Wreathe</a></li>
+						<li><a href="#">Posh</a></li>
+						<li><a href="#">Heart</a></li>
+						<li><a href="#">Varlet</a></li>
+						<li><a href="#">Rome</a></li>
+					</ul>
+				</div>
+
+				<div id="searchdiv">
+					<input type="text" placeholder="Search"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="newsbar">
+			<div class="fixedwidth">
+				<a href="#">
+				<img src="./BCBOlds_images/olds.png" />
+				</a>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="topicmenu">
+			<div class="fixedwidth">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Video</a></li>
+					<li><a href="#">World</a></li>
+					<li><a href="#">Asia</a></li>
+					<li><a href="#">UK</a></li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Tech</a></li>
+					<li><a href="#">Science</a></li>
+					<li><a href="#">Magazine</a></li>
+					<li><a href="#">Entertainment & Arts</a></li>
+					<li><a href="#">Health</a></li>
+					<li><a href="#">More</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+
+		<div id="regionbar">
+			<div class="fixedwidth">
+				<ul>
+					<li><a href="#">Not-Straya</a></li>
+					<li><span id="regionbarregions"><a href="#">Regions</a></span></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+
+		<div id="content" class="fixedwidth">
+			<div class="fixedwidth">
+				<h1 class="header"><a class="blue" href="#">Police warn 1,900 of 'threat to life'</a></h1>
+				<div class="subheadings">
+						<p class="contenttext">Police in the UK have warned nearly 2,000 people their lives were under threat in the last four years, new figures show.</p>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">8 hours ago</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">UK</a></span></li>
+							</ul>
+						</div>
+				</div>
+				<a href="#">
+				<img class="headlineimage" src="./BCBOlds_images/main.jpg" />
+				</a>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		
+		<div class="fixedwidth">	
+			<hr class="hr" />
+		</div>	
+			
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">
+			<div id="subcontent">				
+				<div class="subsubcontent">
+					<a href="#">
+					<img src="./BCBOlds_images/submain1.jpg">					
+					</a>
+					<h3><a class="blue" href="#">Widow confronts husband's killer</a></h3>
+					<p class="contenttext">A widow tells the motorist who killed her cyclist husband he should be ashamed of himself.</p>
+					<div class="timestamp">
+						<ul>
+							<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+							<li><span class="smallborder"><a class="blue" href="#">Tyne & Wear</a></span></li>
+						</ul>
+					</div>
+				</div>
+								
+				<div class="subsubcontent">
+					<a href="#">
+					<img src="./BCBOlds_images/submain2.jpg">					
+					</a>
+					<h3><a class="blue" href="#">Calls for transgender jail term change</a></h3>
+					<p class="contenttext">A petition calling for a transgender woman to serve a prison sentence in a female prison attracts more than 10,000 signatures.</p>
+					<div class="timestamp">
+						<ul>
+							<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+							<li><span class="smallborder"><a class="blue" href="#">Somerset</a></span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div id="subsubcontentright">
+				
+					<div class="subsubcontentrightbox">
+						<h3><a class="blue" href="#">Anfield evacuated over missing man</a></h3>
+						<div class="timestamp">
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Liverpool</a></span></li>
+							</ul>
+						</div>
+					</div>
+					<hr class="hrmini" /> 
+					
+					<div class="subsubcontentrightbox">
+						<h3><a class="blue" href="#">Mosque attack PCs win bravery award</a></h3>
+						<div class="timestamp">
+							<ul>
+								<li><span class="clockbg"><a href="#">8 hours ago</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<hr class="hrmini" /> 
+					
+					<div class="subsubcontentrightbox">
+						<h3><a class="blue" href="#">Experts assess Stonehenge tunnel plan</a></h3>
+						<div class="timestamp">
+							<ul>
+								<li><span class="clockbg"><a href="#">28 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Wiltshire</a></span></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">	
+			<hr class="hr" />
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">
+		<div id="sixheadlinesadjustdiv">
+			<div class="sixheadlines">
+				<h4><a class="blue" href="#">Force 'payout' over PC's relationship</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Shropshire</a></span></li>
+					</ul>
+				<hr class="hrmid" />
+				</div>					
+			
+				<h4><a class="blue" href="#">Report questions Canada boat stability</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">9 hours ago</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">US & Canada</a></span></li>
+					</ul>
+					<hr class="hrmid" />	
+				</div>
+			
+			
+				<h4><a class="blue" href="#">Calls to reopen case of hanged boy</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">London</a></span></li>
+					</ul>	
+				</div>
+			</div>
+		
+			<div class="sixheadlines">
+				<h4><a class="blue" href="#">Terror accused 'had IS beheading video'</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Lancashire</a></span></li>
+					</ul>
+				<hr class="hrmid" />
+				</div>					
+			
+				<h4><a class="blue" href="#">Priest found guilty of sex offences</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+					</ul>
+					<hr class="hrmid" />	
+				</div>
+			
+			
+				<h4><a class="blue" href="#">PCs warned after abusive voicemail</a></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Birmingham & Black Country</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>	
+		</div>
+	
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">	
+			<hr class="hr2" />
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">
+			<span class="thintitle">Also in the news</span>
+			<div class="clear"></div>
+			<div class="sixheadlines">				
+				<a href="#"><img class="alsoimage" src="./BCBOlds_images/comed1.png"/>
+				<div class="alsotitle">
+					<h4><a class="blue" href="#">Comedian's tour bus 'nicked' before gig</a></h4>
+					<div class="timestampadjust">
+						<ul class="timestamp">
+							<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+							<li><span class="smallborder"><a class="blue" href="#">Liverpool</a></span></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="sixheadlines">				
+				<a href="#">
+				<img class="alsoimage" src="./BCBOlds_images/brooch2.png"/>
+				</a>
+				<div class="alsotitle">
+					<h4><a class="blue" href="#">Bid to save rare Anglo-Saxon brooch</a></h4>
+					<div class="timestampadjust">
+						<ul class="timestamp">
+							<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+							<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+						</ul>
+					</div>					
+				</div>
+			</div>	
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">	
+			<hr class="hr2" />
+		</div>
+		
+		<div class="clear"></div>
+
+		<div class="fixedwidth">
+		<div id="FAadjustdiv">
+			<span class="thintitle">Features & Analysis</span>
+			<div class="clear"></div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/1.png" />
+				<h4>Death's Delight</a></h4>
+				<p class="contenttext">The end of life show in all its gory glory</p>
+				<div class="timestampadjust2">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">28 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Bristol</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/2.png" />
+				<h4>'Marvellous achievement'</a></h4>
+				<p class="contenttext">How Kirsty Howard helped save the hospice with "her smile"</p>
+				<div class="timestampadjust2">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">26 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/3.png" />
+				<h4>England's Big Picture</a></h4>
+				<p class="contenttext">Showcasing the best images sent to us from around England</p>
+				<div class="timestampadjust2">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/4.png" />
+				<h4>Fertility Towns</a></h4>
+				<p class="contenttext">Were the royals right to think there was 'something in the water'?</p>
+				<div class="timestampadjust2">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">26 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">England</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/5.png" />
+				<h4>Lakeside at 25</a></h4>
+				<p class="contenttext">'White stiletto' shopping centre goes upmarket</p>
+				<div class="timestampadjust3">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">24 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Essex</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sixheadimages">
+				<a class="blue" href="#"><img src="./BCBOlds_images/6.png" />
+				<h4>Breakdancing in the streets</a></h4>
+				<p class="contenttext">The untold story of a 1980s phenomenon</p>
+				<div class="timestampadjust3">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">25 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Nottingham</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>		
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">	
+			<hr class="hr2" />
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">
+			<span class="thintitle">England sport</span>
+			<div class="clear"></div>
+			<div id="sporttitle">
+				<h2><span class="blktitle"><span class="highlightspanbig">SPORT</span><a class="blue" href="#"> Khan confident of Pacquiao bout</span></a></h2>
+				<p class="contenttext"><a href="#">Amir Khan says he is the favourite to face Manny Pacquiao in the Filipino boxing legend's final fight.</a></p>
+				<ul class="timestamp">
+					<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+					<li><span class="smallborder"><a class="blue" href="#">Boxing</a></span></li>
+				</ul>
+			</div>
+			
+			<div id="sportimg">
+				<a href="#">
+				<img src="./BCBOlds_images/mannypac.png" />	
+				</a>
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div class="sportimgsmall">
+				<a href="#">
+				<img src="./BCBOlds_images/sport1.png" />
+				</a>
+				<span class="blktitle"><h4><span class="highlightspanbig">SPORT</span> <a class="blue" href="#">England women beat Australia in China</a></span></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Football</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sportimgsmall">
+				<a href="#">
+				<img src="./BCBOlds_images/sport2.png" />
+				</a>
+				<span class="blktitle"><h4><span class="highlightspanbig">SPORT</span> <a class="blue" href="#">Lampard backs Mourinho to end slump</a></span></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Football</a></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="sportimgsmall">
+				<a href="#">
+				<img src="./BCBOlds_images/sport3.png" />
+				</a>
+				<span class="blktitle"><h4><span class="highlightspanbig">SPORT</span> <a class="blue" href="#">Coloccini red card overturned by FA</a></span></h4>
+				<div class="timestampadjust">
+					<ul class="timestamp">
+						<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+						<li><span class="smallborder"><a class="blue" href="#">Football</a></span></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="fixedwidth">	
+			<hr class="hr2" />
+		</div>
+		
+		<div class="clear"></div>
+
+		<div class="fixedwidth">
+			<span class="thintitle">More from BCB Olds</span>
+			<div class="clear"></div>
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more1.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Business</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">Emissions scandal put VW into (d)e(com)mission.</a></span></h4>
+			</div>
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more2.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">UK Politics</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">PM to attack Eurosceptics at summit</a></span></h4>
+			</div>
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more3.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Health</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">Cancer care variations 'unacceptable'</a></span></h4>
+			</div>		
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more4.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Education & Family</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">No teacher, more mo'</a></span></h4>
+			</div>	
+			
+			<div class="clear"></div>
+			
+			<div class="moredivs">
+				<img src="./BCBOlds_images/more5.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Technology</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">Schools warned about using the D</a></span></h4>
+			</div>		
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more6.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Science & Environment</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">NASA probe to sweep over Saturn moon, not Uranus</a></span></h4>
+			</div>
+
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more7.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Entertainment & Arts</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">Comic Mortimer has triple heart bypass</a></span></h4>
+			</div>			
+
+			
+			<div class="moredivs">
+				<a href="#">
+				<img src="./BCBOlds_images/more8.png" />
+				</a>
+				<h4><span class="moredivsheadlines"><a class="blue" href="#">Magazine</a></span></h4>
+				<span class="blktitle"><h4><a class="blue" href="#">Wonky or not, vegetables are ew</a></span></h4>
+			</div>			
+		</div>
+		
+		<div class="clear"></div>
+
+
+		<div id="services">
+			<div class="fixedwidth">
+				<span id="thintitlewhite">BCB Olds Services</span>
+				<div class="clear"></div>
+			
+				<ul>
+					<li><a class="white" href="#">On your mobile</a></li>
+					<li><a class="white" href="#">On your connected TV</a></li>
+					<li><a class="white" href="#">Get news alerts</a></li>
+					<li><a class="white" href="#">Contact BBC News</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="explore">
+			<div class="fixedwidth">
+				<span id="thicktitlewhite">Explore the BCB</span>
+				<div class="clear"></div>
+			
+				<div id="exploredivsleft">
+					<div class="exploredivs">
+						<ul>
+							<li><a class="white" href="#">Olds</a></li>
+							<li><a class="white" href="#">Capitol</a></li>
+							<li><a class="white" href="#">CBCB</a></li>
+							<li><a class="white" href="#">Music</a></li>
+						</ul>
+					</div>
+					
+					<div class="exploredivs">
+						<ul>
+							<li><a class="white" href="#">Ports</a></li>
+							<li><a class="white" href="#">Culture</a></li>
+							<li><a class="white" href="#">CBeebies</a></li>
+							<li><a class="white" href="#">Nurture</a></li>
+						</ul>
+					</div>
+				
+					<div class="exploredivs">
+						<ul>
+							<li><a class="white" href="#">Converstarter</a></li>
+							<li><a class="white" href="#">Commute</a></li>
+							<li><a class="white" href="#">Drinks</a></li>
+							<li><a class="white" href="#">International</a></li>
+						</ul>
+					</div>		
+
+					<div class="exploredivs">
+						<ul>
+							<li><a class="white" href="#">Shop</a></li>
+							<li><a class="white" href="#">Future</a></li>
+							<li><a class="white" href="#">Make It Digital</a></li>
+						</ul>
+					</div>	
+					
+					<div class="exploredivs">
+						<ul>
+							<li><a class="white" href="#">Earth</a></li>
+							<li><a class="white" href="#">TV</a></li>
+							<li><a class="white" href="#">iWonder</a></li>
+						</ul>
+					</div>	
+					
+					<div id="exploredivsright">
+						<ul>
+							<li><a class="white" href="#">Travel</a></li>
+							<li><a class="white" href="#">Radio</a></li>
+							<li><a class="white" href="#">Bitesize</a></li>
+						</ul>
+					</div>						
+			</div>
+				
+			<div class="clear"></div>
+			
+			<div id="copyrightbar">
+				<ul>
+					<li><a class="white" href="#">Terms of Use</a></li>
+					<li><a class="white" href="#">About the BBC</a></li>
+					<li><a class="white" href="#">Privacy Policy</a></li>
+					<li><a class="white" href="#">Cookies</a></li>
+					<li><a class="white" href="#">Accessibility Help</a></li>
+					<li><a class="white" href="#">Parental Guidance</a></li>
+					<li><a class="white" href="#">Contact the BBC</a></li>
+					<li><a class="white" href="#">Advertise with us</a></li>
+					<li><a class="white" href="#">Ad choices</a></li>
+				</ul>
+				<div class="clear"></div>
+				<p>Copyright © 2015 BCB. The BCB is not responsible for the content of external sites. Read about our approach to external inkling.</p>
+			</div>
+		</div>		
+		
+		<div id="fixedrightbar">
+			<div id="rightdivs">
+				<span class="thintitle">Watch & Listen</span>
+				<div class="clear"></div>
+				
+				<div class="videos">
+					<a href="#">
+					<img src="./BCBOlds_images/right1.png" />
+					</a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">WW2 veteran wants bomber recognition</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Manchester</a></span></li>
+							</ul>
+						</div>				
+					</p>				
+				</div>			
+				<div class="videos">
+					<a href="#">
+					<img src="./BCBOlds_images/right2.png" />			
+					</a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">Citizen Khan takes over station tannoy</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Birmingham & Black Country</a></span></li>
+							</ul>
+						</div>				
+					</p>					
+				</div>
+
+				<div class="clear"></div>
+				
+				<div class="videos">
+					<a href="#">
+					<img src="./BCBOlds_images/right3.png" />			
+					</a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">Amputee claims press-ups record</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Sussex</a></span></li>
+							</ul>
+						</div>				
+					</p>					
+				</div>
+				
+				<div class="videos">
+					<a href="#">
+					<img src="./BCBOlds_images/right4.png" />			
+					</a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">Beauty queen reveals her OCD hell</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Tyne & Wear</a></span></li>
+							</ul>
+						</div>				
+					</p>					
+				</div>
+
+				<div class="videos">
+					<a href="#">
+					<img src="./BCBOlds_images/right5.png" />			
+					</a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">Boris Johnson takes tumble in tug of war</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">UK Politics</a></span></li>
+							</ul>
+						</div>				
+					</p>					
+				</div>
+
+				<div class="videos">
+					<a href="#"><img src="./BCBOlds_images/right6.png" /></a>
+					<p>
+						<span class="medboldtext"><a class="blue" href="#">Abusive police message left on mobile</a></span>
+						<div class="timestamp">					
+							<ul>
+								<li><span class="clockbg"><a href="#">27 October 2015</a></span></li>
+								<li><span class="smallborder"><a class="blue" href="#">Birmingham & Black Country</a></span></li>
+							</ul>
+						</div>				
+					</p>					
+				</div>	
+			</div>
+			
+			<div id="rightshare">
+				<span class="thintitle">Share with BCB Olds</span>
+				<div class="clear"></div>
+				<img src="./BCBOlds_images/iconphone.png" />				
+				<p>Send us an SMS or MMS to +61 xxxx yyyyyy</p>	
+				<img src="./BCBOlds_images/iconmail.png" />				
+				<p>Email us at <a class="blue" href="#">havenosay@bcb.com.au</a></p>
+				<img src="./BCBOlds_images/icontwitter.png" />
+				<p>Follow us on <a class="blue" href="#">Twitter</a></p>
+			</div>
+			
+			<div id="follow">
+			<span class="thintitle">Follow Us</span>
+			<div class="clear"></div>
+				<div id="followfb">
+					<a href="#">Facebook</a>
+				</div>
+				
+				<div id="followtw">
+					<a href="#">Twitter</a>
+				</div>	
+
+				<div id="followrss">
+					<a href="#">RSS News Feed</a>
+				</div>	
+			</div>
+			
+			<div id="mostpopular">
+				<div id="mostpopularheader">
+					<span class="thintitle">Most Popular</span>
+					<div class="clear"></div>
+					<p class="contenttext">From England</p>					
+				</div>
+				
+				<div class="dailypopularleft">
+					<ul>
+						<li><a class="blue" href="#">TUE</a></li>
+						<li><a class="blue" href="#">MON</a></li>
+						<li><a class="blue" href="#">SUN</a></li>
+						<li><a class="blue" href="#">SAT</a></li>
+						<li><a class="blue" href="#">FRI</a></li>
+					</ul>
+				</div>
+
+				<div class="dailypopularright">
+					<ul>
+						<li><a class="blue" href="#">Bill Bailey: Comedian's tour bus 'nicked' in Liverpool</a></li>
+						<li><a class="blue" href="#">St Albans sinkhole: Further 'void' possible at sinkhole site</a></li>
+						<li><a class="blue" href="#">Paramedics 'baffled' by legal highs, as police incidents rise</a></li>
+						<li><a class="blue" href="#">Manchester fundraiser Kirsty Howard dies aged 20</a></li>
+						<li><a class="blue" href="#">The UK YouTube stars with fans around the world</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+</body>
+</html>
